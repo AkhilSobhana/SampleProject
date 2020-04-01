@@ -1,5 +1,5 @@
 apply plugin: "com.android.application"
-
+apply plugin: 'com.google.gms.google-services'
 import com.android.build.OutputFile
 
 /**
@@ -129,7 +129,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.sampleproject"
+        applicationId "com.sampleproject.mobile"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -193,7 +193,13 @@ dependencies {
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+     implementation project(':react-native-firebase')
 
+  // Firebase dependencies
+  implementation "com.google.android.gms:play-services-base:16.1.0"
+  implementation "com.google.firebase:firebase-core:16.0.9"
+implementation "com.google.firebase:firebase-database:17.0.0"
+implementation "com.google.firebase:firebase-storage:17.0.0"
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
       exclude group:'com.facebook.fbjni'
     }

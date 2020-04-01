@@ -1,4 +1,4 @@
-package com.sampleproject;
+package com.sampleproject.mobile;
 
 import com.facebook.react.ReactActivity;
 
